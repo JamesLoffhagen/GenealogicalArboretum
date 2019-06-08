@@ -1,0 +1,2 @@
+class EducationType < ApplicationRecord
+end

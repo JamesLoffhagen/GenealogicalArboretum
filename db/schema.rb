@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_08_210454) do
+ActiveRecord::Schema.define(version: 2019_06_08_230511) do
+
+  create_table "education_types", force: :cascade do |t|
+    t.string "education_type_name"
+    t.string "education_type_notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "health_condition_types", force: :cascade do |t|
+    t.string "health_condition_type_name"
+    t.string "health_condition_type_notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "individuals", force: :cascade do |t|
     t.string "name_last"
@@ -24,6 +38,21 @@ ActiveRecord::Schema.define(version: 2019_06_08_210454) do
     t.string "place_birth"
     t.string "cause_death"
     t.text "misc_notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "object_types", force: :cascade do |t|
+    t.string "object_type_name"
+    t.string "object_type_notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "occupation_types", force: :cascade do |t|
+    t.string "occupation_type_name"
+    t.string "occupation_type_description"
+    t.string "occupation_type_notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -44,6 +73,20 @@ ActiveRecord::Schema.define(version: 2019_06_08_210454) do
     t.index ["individual_id"], name: "index_parents_on_individual_id"
     t.index ["parent_id"], name: "index_parents_on_parent_id"
     t.index ["parent_type_id"], name: "index_parents_on_parent_type_id"
+  end
+
+  create_table "relationship_types", force: :cascade do |t|
+    t.string "relationship_type_name"
+    t.string "relationship_type_notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "role_types", force: :cascade do |t|
+    t.string "role_type_name"
+    t.string "role_type_notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

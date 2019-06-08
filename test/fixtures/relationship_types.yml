@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  relationship_type_name: MyString
+  relationship_type_notes: MyString
+
+two:
+  relationship_type_name: MyString
+  relationship_type_notes: MyString
