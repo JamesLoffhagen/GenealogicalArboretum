@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_08_231405) do
+ActiveRecord::Schema.define(version: 2019_06_08_231527) do
 
   create_table "education_field_types", force: :cascade do |t|
     t.string "education_field_type_name"
@@ -24,6 +24,20 @@ ActiveRecord::Schema.define(version: 2019_06_08_231405) do
     t.string "education_type_notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "educations", force: :cascade do |t|
+    t.integer "individual_id"
+    t.integer "education_type_id"
+    t.integer "education_field_type_id"
+    t.string "education_name"
+    t.string "education_institution"
+    t.string "education_notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["education_field_type_id"], name: "index_educations_on_education_field_type_id"
+    t.index ["education_type_id"], name: "index_educations_on_education_type_id"
+    t.index ["individual_id"], name: "index_educations_on_individual_id"
   end
 
   create_table "health_condition_types", force: :cascade do |t|

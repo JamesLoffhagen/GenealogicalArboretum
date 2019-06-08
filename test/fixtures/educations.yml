@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  individaul: one
+  education_type: one
+  education_field_type: one
+  education_name: MyString
+  education_institution: MyString
+  education_notes: MyString
+
+two:
+  individaul: two
+  education_type: two
+  education_field_type: two
+  education_name: MyString
+  education_institution: MyString
+  education_notes: MyString
