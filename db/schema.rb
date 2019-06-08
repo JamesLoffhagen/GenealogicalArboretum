@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_08_230511) do
+ActiveRecord::Schema.define(version: 2019_06_08_231405) do
+
+  create_table "education_field_types", force: :cascade do |t|
+    t.string "education_field_type_name"
+    t.string "education_field_type_notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "education_types", force: :cascade do |t|
     t.string "education_type_name"
