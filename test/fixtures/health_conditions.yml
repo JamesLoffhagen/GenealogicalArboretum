@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  individual: one
+  health_condition_type: one
+  health_condition_notes: MyString
+
+two:
+  individual: two
+  health_condition_type: two
+  health_condition_notes: MyString

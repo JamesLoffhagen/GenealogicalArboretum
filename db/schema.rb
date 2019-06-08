@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_08_231527) do
+ActiveRecord::Schema.define(version: 2019_06_08_232813) do
 
   create_table "education_field_types", force: :cascade do |t|
     t.string "education_field_type_name"
@@ -45,6 +45,16 @@ ActiveRecord::Schema.define(version: 2019_06_08_231527) do
     t.string "health_condition_type_notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "health_conditions", force: :cascade do |t|
+    t.integer "individual_id"
+    t.integer "health_condition_type_id"
+    t.string "health_condition_notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["health_condition_type_id"], name: "index_health_conditions_on_health_condition_type_id"
+    t.index ["individual_id"], name: "index_health_conditions_on_individual_id"
   end
 
   create_table "individuals", force: :cascade do |t|
