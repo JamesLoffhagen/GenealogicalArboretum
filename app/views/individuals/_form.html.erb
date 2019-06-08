@@ -1,0 +1,72 @@
+<%= form_with(model: individual, local: true) do |form| %>
+  <% if individual.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(individual.errors.count, "error") %> prohibited this individual from being saved:</h2>
+
+      <ul>
+      <% individual.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name_last %>
+    <%= form.text_field :name_last %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name_first %>
+    <%= form.text_field :name_first %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name_middle %>
+    <%= form.text_field :name_middle %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name_maiden %>
+    <%= form.text_field :name_maiden %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name_familiar %>
+    <%= form.text_field :name_familiar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.text_field :gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_birth %>
+    <%= form.datetime_select :date_birth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_death %>
+    <%= form.datetime_select :date_death %>
+  </div>
+
+  <div class="field">
+    <%= form.label :place_birth %>
+    <%= form.text_field :place_birth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cause_death %>
+    <%= form.text_field :cause_death %>
+  </div>
+
+  <div class="field">
+    <%= form.label :misc_notes %>
+    <%= form.text_area :misc_notes %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  individual_id: one
+  parent_id: one
+  parent_type: one
+  parent_notes: MyText
+
+two:
+  individual_id: two
+  parent_id: two
+  parent_type: two
+  parent_notes: MyText

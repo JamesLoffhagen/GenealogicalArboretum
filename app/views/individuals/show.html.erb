@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name last:</strong>
+  <%= @individual.name_last %>
+</p>
+
+<p>
+  <strong>Name first:</strong>
+  <%= @individual.name_first %>
+</p>
+
+<p>
+  <strong>Name middle:</strong>
+  <%= @individual.name_middle %>
+</p>
+
+<p>
+  <strong>Name maiden:</strong>
+  <%= @individual.name_maiden %>
+</p>
+
+<p>
+  <strong>Name familiar:</strong>
+  <%= @individual.name_familiar %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @individual.gender %>
+</p>
+
+<p>
+  <strong>Date birth:</strong>
+  <%= @individual.date_birth %>
+</p>
+
+<p>
+  <strong>Date death:</strong>
+  <%= @individual.date_death %>
+</p>
+
+<p>
+  <strong>Place birth:</strong>
+  <%= @individual.place_birth %>
+</p>
+
+<p>
+  <strong>Cause death:</strong>
+  <%= @individual.cause_death %>
+</p>
+
+<p>
+  <strong>Misc notes:</strong>
+  <%= @individual.misc_notes %>
+</p>
+
+<%= link_to 'Edit', edit_individual_path(@individual) %> |
+<%= link_to 'Back', individuals_path %>
