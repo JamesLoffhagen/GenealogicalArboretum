@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_08_232813) do
+ActiveRecord::Schema.define(version: 2019_06_09_000120) do
 
   create_table "education_field_types", force: :cascade do |t|
     t.string "education_field_type_name"
@@ -57,6 +57,16 @@ ActiveRecord::Schema.define(version: 2019_06_08_232813) do
     t.index ["individual_id"], name: "index_health_conditions_on_individual_id"
   end
 
+  create_table "individual_memories", force: :cascade do |t|
+    t.integer "individual_id"
+    t.string "individual_memory_name"
+    t.date "individual_memory_date"
+    t.string "individual_memory_fs_location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["individual_id"], name: "index_individual_memories_on_individual_id"
+  end
+
   create_table "individuals", force: :cascade do |t|
     t.string "name_last"
     t.string "name_first"
@@ -86,6 +96,18 @@ ActiveRecord::Schema.define(version: 2019_06_08_232813) do
     t.string "occupation_type_notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "occupations", force: :cascade do |t|
+    t.integer "individual_id"
+    t.integer "occupation_type_id"
+    t.date "occupation_date_start"
+    t.date "occupation_date_end"
+    t.string "occupation_notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["individual_id"], name: "index_occupations_on_individual_id"
+    t.index ["occupation_type_id"], name: "index_occupations_on_occupation_type_id"
   end
 
   create_table "parent_types", force: :cascade do |t|

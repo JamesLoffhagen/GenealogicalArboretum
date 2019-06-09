@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  individual: one
+  occupation_type: one
+  occupation_date_start: 2019-06-08
+  occupation_date_end: 2019-06-08
+  occupation_notes: MyString
+
+two:
+  individual: two
+  occupation_type: two
+  occupation_date_start: 2019-06-08
+  occupation_date_end: 2019-06-08
+  occupation_notes: MyString

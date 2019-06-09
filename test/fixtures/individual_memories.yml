@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  individual: one
+  individual_memory_name: MyString
+  individual_memory_date: 2019-06-08
+  individual_memory_fs_location: MyString
+
+two:
+  individual: two
+  individual_memory_name: MyString
+  individual_memory_date: 2019-06-08
+  individual_memory_fs_location: MyString
